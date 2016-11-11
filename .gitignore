@@ -1,0 +1,11 @@
+*.pyc
+*.egg-info/
+*.cache/
+*.guten_tags
+build/
+dist/
+bin/
+include/
+lib/
+pip-selfcheck.json
+
