@@ -15,7 +15,7 @@ data = '''
 
 def test_input_path():
     with tempfile.NamedTemporaryFile() as tfile:
-        with open(tfile.name, 'w') as f:
+        with open(tfile.name, 'w'):
             tfile.write(data.encode('utf-8'))
             tfile.flush()
             fzf = Fzf()
@@ -27,3 +27,9 @@ def test_input_list():
     fzf = Fzf()
     results = fzf.fuzz('12', input_list=data.splitlines())
     assert len(results) == 8
+
+
+def test_nomatch_no_crash():
+    fzf = Fzf()
+    results = fzf.fuzz('999', input_list=data.splitlines())
+    assert len(results) == 0

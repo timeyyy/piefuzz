@@ -12,7 +12,7 @@ def read(*paths):
 
 
 setup(name='piefuzz',
-      version='1.0.2',
+      version='1.0.3',
       description="Pie wrapper for junegunn's fuzzyfinder (fzf)",
       long_description = read('README.md'),
       keywords = 'pyfzf fzf fuzzyfinder fuzz find ctrl-p command-t',

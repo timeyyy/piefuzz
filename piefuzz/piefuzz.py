@@ -27,10 +27,13 @@ class Fzf():
         input_list: iterable of strings to search
         '''
         assert input_path or input_list
-        if input_path:
-            cmd = cat[input_path] | self.fzf['--filter', query, '-0', '-1']
-            return cmd()
-        else:
-            input_string = '\n'.join(input_list)
-            cmd = echo[input_string] | self.fzf['--filter', query, '-0', '-1']
-            return cmd()
+        try:
+            if input_path:
+                cmd = cat[input_path] | self.fzf['--filter', query, '-0', '-1']
+                return cmd()
+            else:
+                input_string = '\n'.join(input_list)
+                cmd = echo[input_string] | self.fzf['--filter', query, '-0', '-1']
+                return cmd()
+        except plumbum.commands.processes.ProcessExecutionError:
+            return ''
