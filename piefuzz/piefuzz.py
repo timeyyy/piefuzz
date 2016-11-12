@@ -1,7 +1,6 @@
+import plumbum
 from plumbum import local
 from plumbum.cmd import cat, echo
-import os
-from subprocess import run, PIPE
 from typing import Iterable
 
 FZF_URL = "https://github.com/junegunn/fzf"
@@ -14,7 +13,7 @@ class Fzf():
         '''
         try:
             if fzf_path:
-                sel.fzf = local.get(fzf_path)
+                self.fzf = local.get(fzf_path)
             else:
                 self.fzf = local['fzf']
         except plumbum.CommandNotFound:
@@ -23,8 +22,9 @@ class Fzf():
 
     def fuzz(self, query, *_, input_path: str=None, input_list: Iterable=None) -> bytes:
         '''
-        choices: path to a file containing items seperated by newline
         query: what you are searching for
+        input_path: path to file to search, seperated by newlines
+        input_list: iterable of strings to search
 
         returns bytes
         '''
