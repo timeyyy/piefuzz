@@ -37,10 +37,6 @@ otherwise an iterable of strings
 
     >>> result = fzf.fuzz(query, input_list=['abc', 'def'])
 
-the result is bytes,  you may want
-
-    >>> results.decode('utf-8').split('\n')
-
 
 License
 -------

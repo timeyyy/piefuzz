@@ -20,13 +20,11 @@ class Fzf():
             raise SystemError("Cannot find 'fzf' ( {0} )".format(FZF_URL))
 
 
-    def fuzz(self, query, *_, input_path: str=None, input_list: Iterable=None) -> bytes:
+    def fuzz(self, query, *_, input_path: str=None, input_list: Iterable=None) -> str:
         '''
         query: what you are searching for
         input_path: path to file to search, seperated by newlines
         input_list: iterable of strings to search
-
-        returns bytes
         '''
         assert input_path or input_list
         if input_path:
