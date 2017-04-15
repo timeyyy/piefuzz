@@ -1,4 +1,4 @@
-*.pyc
+.pyc
 *.egg-info/
 *.cache/
 *.guten_tags
@@ -8,4 +8,6 @@ bin/
 include/
 lib/
 pip-selfcheck.json
+tags
+__pycache__/
 
