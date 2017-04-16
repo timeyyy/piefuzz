@@ -1,0 +1,20 @@
+sudo: False
+
+language: python
+python:
+  - 3.4
+  - 3.5
+  - 3.6
+
+install:
+  - pip install pytest
+  - pip install plumbum
+  - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  # generate binary only
+  - ~/.fzf/install --bin
+  - export PATH="$HOME/.fzf/bin:$PATH"
+
+script:
+  - python -m pytest --verbose piefuzz/tests
+notifications:
+  - email: false

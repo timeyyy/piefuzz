@@ -1,5 +1,6 @@
 piefuzz
 =======
+[![Build Status](https://travis-ci.org/timeyyy/piefuzz.svg)](https://travis-ci.org/timeyyy/piefuzz)
 
 ##### A python wrapper for *junegunn*'s awesome [fzf](https://github.com/junegunn/fzf).
 
