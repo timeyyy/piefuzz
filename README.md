@@ -37,6 +37,8 @@ otherwise an iterable of strings
 
     >>> result = fzf.fuzz(query, input_list=['abc', 'def'])
 
+output is a newline deliminated utf-8 string
+
 
 License
 -------
