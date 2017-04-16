@@ -30,8 +30,8 @@ setup(name='piefuzz',
           'Operating System :: OS Independent',
           'Programming Language :: Python',
           'Topic :: Terminals',
-          'Programming Language :: Python :: 3.4',
           'Programming Language :: Python :: 3.5',
+          'Programming Language :: Python :: 3.6',
           ]
       )
 

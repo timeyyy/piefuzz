@@ -2,7 +2,6 @@ sudo: False
 
 language: python
 python:
-  - 3.4
   - 3.5
   - 3.6
 
@@ -15,6 +14,6 @@ install:
   - export PATH="$HOME/.fzf/bin:$PATH"
 
 script:
-  - python -m pytest --verbose piefuzz/tests
+  - python -m pytest --verbose
 notifications:
   - email: false

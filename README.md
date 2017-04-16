@@ -10,7 +10,7 @@ We also work exclusivley on python3, instead of exclusivley on python2...
 Requirements
 ------------
 
-* Python 3.4+
+* Python 3.5+
 * [fzf](https://github.com/junegunn/fzf)
 
 
